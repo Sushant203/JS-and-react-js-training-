@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in JS</title>
+</head>
+
+<body>
+    <p id="para">
+        Hello guyz lets learn JS more
+    </p>
+    <h1 id="head">
+        Hello guyz lets learn JS more
+    </h1>
+    <button type="button" onclick="changeColor()">
+        change color
+    </button>
+    <button type="button" onclick="showHeading()">
+        Show Element
+    </button>
+    <script>
+        let head = document.querySelector("#head")
+        function changeColor() {
+            let para = document.getElementById("para")
+            head.style.display = "none"
+            para.style.backgroundColor = 'red'
+        }
+        function showHeading() {
+            head.style.display = "block"
+        }
+
+        //creating new element using js 
+        let newElement = document.createElement("p")
+        newElement.innerText = "this is the element from js"
+        //to add the newly created element to html fromjs 
+
+        document.body.appendChild(newElement)
+    </script>
+</body>
+
+</html>
